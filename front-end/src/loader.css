@@ -1,28 +1,7 @@
-#app {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.main-component {
-    width: 100%;
-    height: 100%;
-}
-.main-component .main-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column-reverse;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
 .loader-profile {
     position: relative;
-    width: 300px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border: 1px solid #d3d3d3;
     padding: 15px;
     background-color: #f8f8f8;
@@ -47,7 +26,7 @@
 .loader-profile .wrapper > div {
     background-color: #cacaca;
 }
-.loader-profile .circle {
+.loader-profile .loader__image {
     width: 290px;
     height: 140px; 
     max-width: 29rem;
@@ -55,14 +34,14 @@
     border-radius: 0.5rem;
     margin-bottom: 10px;
 }
-.loader-profile .line-1 {
+.loader-profile .line__1 {
     top: 57px;
     left: 0px;
     height: 10px;
     width: 100%;
     margin-bottom: 10px;
 }
-.loader-profile .line-2 {
+.loader-profile .line__2 {
    
     top: 80px;
     left: 0px;

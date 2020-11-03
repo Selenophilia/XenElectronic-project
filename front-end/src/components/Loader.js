@@ -5,25 +5,25 @@ function Loader(){
         <div className='row'>
             <div className="loader-profile">
                 <div className="wrapper">
-                    <div className="circle" />
-                    <div className="line-1" />
-                    <div className="line-2" />
+                    <div className="loader__image" />
+                    <div className="line__1" />
+                    <div className="line__2" />
                 </div>
             </div>
 
             <div className="loader-profile">
                 <div className="wrapper">
-                    <div className="circle" />
-                    <div className="line-1" />
-                    <div className="line-2" />
+                    <div className="loader__image" />
+                    <div className="line__1" />
+                    <div className="line__2" />
                 </div>
             </div>
 
             <div className="loader-profile">
                 <div className="wrapper">
-                    <div className="circle" />
-                    <div className="line-1" />
-                    <div className="line-2" />
+                    <div className="loader__image" />
+                    <div className="line__1" />
+                    <div className="line__2" />
                 </div>
             </div>
         </div>
