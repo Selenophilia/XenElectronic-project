@@ -1,31 +1,21 @@
-import data from './seed'
 import './App.css';
-import Product from './components/Product'
 import Navbar from   './components/Navbar'
 import Footer from   './components/Footer'
+import  { BrowserRouter, Route } from 'react-router-dom'
+import Home from './screens/Home'
+import ProductDetails from './screens/ProductDetails'
 function App() {
-
-    let getProducts = data.products.map((product) => 
-                    <Product key={product.id} 
-                            name={product.name}
-                            price={product.price}
-                            image_url={product.image}
-                            description={product.description}
-                            brand={product.brand} 
-                            reviews={product.numReviews}
-                            rating={product.rating}/>
-    );
   return (
-    <div className="container">
-        <Navbar />
-    
-        <section className="products">
-          <div className="row center">
-               {getProducts}
-            </div>              
-        </section>
-        <Footer />
-    </div>
+      <BrowserRouter>
+        <div className="container">
+            <Navbar /> 
+                <section className="products">
+                    <Route path='/product/:id' component={ProductDetails} ></Route>        
+                    <Route path='/' component={Home}  exact></Route>        
+                </section>
+            <Footer />
+        </div>
+    </BrowserRouter>
   );
 }
 
