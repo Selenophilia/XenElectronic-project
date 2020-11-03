@@ -1,5 +1,22 @@
-import express from 'express'
+import express from "express";
+import data from './seed'
 
-const app = express()
+// run node -r esm back-end/server.js to start server
+// for nodemon nodemon -r esm server.js
 
-app.listen(5000, () => console.log('server started'))
+const app = express();
+
+const  PORT = process.env.PORT || 5000
+
+app.get('/', (req, res) => {
+    res.send('Server Ready!');
+  });
+
+app.get('/api/products', (req, res) => {
+   res.send(data.products)
+});
+
+app.listen(PORT, function () {
+  console.log(`listening on ${PORT}`);
+});
+
