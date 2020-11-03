@@ -1,5 +1,16 @@
-import express from 'express'
+import express from "express";
+const app = express();
 
-const app = express()
+app.get('/', (req, res) => {
+    res.send('Server Ready!');
+  });
 
-app.listen(5000, () => console.log('server started'))
+app.get('/api/products', (req, res) => {
+  res.send('Server Ready!');
+});
+
+app.listen(5000, function () {
+  console.log('Listening on port 5000!');
+});
+
+// run node -r esm back-end/server.js to start server
