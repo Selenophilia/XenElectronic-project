@@ -98,6 +98,8 @@ footer span{
 
 /*images*/
 img{
+    width: 290px;
+    height: 166px;
     border-radius: 0.5rem;
 }
 
