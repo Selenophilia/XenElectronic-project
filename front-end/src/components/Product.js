@@ -6,7 +6,7 @@ function Product(props){
     return(
         <div className="card">
                     <a href={`/product/${props.id}`}>
-                      <img className="image" src={props.image_url} alt={props.name}/>   
+                      <img className="image__medium" src={props.image_url} alt={props.name}/>   
                       </a>
                       <div className="card-body">
                           <div className="product-details">
