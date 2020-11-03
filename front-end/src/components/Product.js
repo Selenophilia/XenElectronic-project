@@ -1,4 +1,5 @@
 import React from 'react';
+import Rating from './Rating';
 
 
 function Product(props){
@@ -23,13 +24,9 @@ function Product(props){
                               </span>
                               
                           </div>
-                          <div className="product-rating">
-                              <span><i className="fa fa-star"></i> </span>
-                              <span><i className="fa fa-star"></i> </span>
-                              <span><i className="fa fa-star"></i> </span>
-                              <span><i className="fa fa-star"></i> </span>
-                              <span><i className="fa fa-star"></i> </span>             
-                          </div>           
+                         <Rating reviews={props.reviews}
+                                  rating={props.rating}
+                         />
                       </div>                        
                   </div>  
     );

@@ -109,3 +109,10 @@ img.image{
     color: #f0c040;
     margin: 0.1rem;
 }
+
+
+.product-rating p{
+    float: right;
+    color: #c0c0c0;
+}
+

@@ -11,7 +11,9 @@ function App() {
                             price={product.price}
                             image_url={product.image}
                             description={product.description}
-                            brand={product.brand} />
+                            brand={product.brand} 
+                            reviews={product.numReviews}
+                            rating={product.rating}/>
     );
   return (
     <div className="container">
