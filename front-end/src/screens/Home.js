@@ -1,20 +1,31 @@
 import React, { useEffect, useState } from 'react'
-import data from '../seed'
 import Product from '../components/Product'
 import axios from 'axios'
-
+import Loader from '../components/Loader'
 function ProductDetails(props){
-    const [product, setProduct] = useState([])
+    const [products, setProduct] = useState([])
+    const [loader, setLoader] = useState(false)
+    const [error, setError] = useState(false)
     
     useEffect(() => {
-        const getProduct = async () => {
-            const { data } = await axios.get('/api/product') 
-          
+       
+        const fetchProduct = async () => {
+            try{
+                setLoader(true)
+                const { data } = await axios.get('/api/products')    
+                setLoader(false)
+                setProduct(data)
+            } catch(err){
+                console.log(err.message)
+                setError(err.message)
+                setLoader(false)
+            }
+
         }
-        console.log(getProduct())
+        fetchProduct()
     }, [])
 
-    let getProducts = data.products.map((product) => 
+    let getProducts = products.map((product) => 
                     <Product key={product.id} 
                              id={product.id}    
                              name={product.name}
@@ -27,8 +38,10 @@ function ProductDetails(props){
     );
 
     return(
-        <div className="row center">
-                 {getProducts}
+        <div className="row center">   
+
+        {loader ? <Loader /> : getProducts }
+              
         </div>         
     );
 }
