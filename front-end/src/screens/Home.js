@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import data from '../seed'
 import Product from '../components/Product'
+import axios from 'axios'
 
 function ProductDetails(props){
+    const [product, setProduct] = useState([])
+    
+    useEffect(() => {
+        const getProduct = async () => {
+            const { data } = await axios.get('/api/product') 
+          
+        }
+        console.log(getProduct())
+    }, [])
+
     let getProducts = data.products.map((product) => 
                     <Product key={product.id} 
                              id={product.id}    
