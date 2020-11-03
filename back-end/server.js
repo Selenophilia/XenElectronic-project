@@ -1,4 +1,5 @@
 import express from "express";
+import data from './seed'
 const app = express();
 
 app.get('/', (req, res) => {
@@ -6,7 +7,7 @@ app.get('/', (req, res) => {
   });
 
 app.get('/api/products', (req, res) => {
-  res.send('Server Ready!');
+   res.send(data.products)
 });
 
 app.listen(5000, function () {
@@ -14,3 +15,4 @@ app.listen(5000, function () {
 });
 
 // run node -r esm back-end/server.js to start server
+// for nodemon nodemon -r esm server.js
