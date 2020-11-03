@@ -67,17 +67,52 @@ footer span{
     justify-content: center;
 }
 
+.row > .col-1{
+    margin-left: 4.5rem;
+    margin-right: 25rem;
+    margin-bottom: 5rem;
+    flex: 1 1 25rem;
+    width: 100%;
+}
+.row > .col-2{
+    flex: 2 1 50rem;
+    margin-left: 4.5rem;
+}
+@media    (max-width: 600px) {
+    .row > .col-2{
+        width: 50%;
+        margin: 0;
+    }
 
-/*images*/
-img{
+    .row > .col-1{
+        margin-left:0;
+        margin-right: 0;    
+     }
+
+     img.img__large{
+         width: 100%;
+        padding: 0;
+     }
+}
+
+img.image__medium{
     width: 290px;
-    height: 166px;
+    height: 166px; 
+    max-width: 29rem;
+    width: 100%;
     border-radius: 0.5rem;
 }
 
-img.image{
-    max-width: 29rem;
+img.image__large{
+    border-radius: 0.5rem;
     width: 100%;
+    height: 60vh;
+}
+
+img.image__small{
+    border-radius: 0.5rem;
+    width: 50px;
+    height: 50px;
 }
 
 /*card*/
@@ -115,4 +150,7 @@ img.image{
     float: right;
     color: #c0c0c0;
 }
+
+
+/* product details*/
 
