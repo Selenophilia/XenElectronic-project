@@ -54,6 +54,11 @@ footer{
 
 footer span{
     margin-right: 10px;
+    
+}
+
+footer span a{
+    color: #fff
 }
 
 .row{
@@ -92,6 +97,9 @@ footer span{
      img.img__large{
          width: 100%;
         padding: 0;
+     }
+     footer{
+         font-size: 1rem;
      }
 }
 
