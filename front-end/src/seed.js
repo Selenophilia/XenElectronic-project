@@ -3,6 +3,7 @@ const data = {
         {
             id: 1,
             name: "Playstation 4 Console",
+            category: 'console',
             price: 200,
             rating: 5,
             image: '/images/ps4-controller.jpeg',
@@ -13,6 +14,7 @@ const data = {
         {
             id: 2,
             name: "Xbox 360 controller",
+            category: 'console',
             price: 120,
             rating: 4.5,
             image: '/images/xbox-ctrl.jpeg',
@@ -23,6 +25,7 @@ const data = {
         {
             id: 3,
             name: "logitech-502",
+            category: 'mouse',
             price: 300,
             rating: 4.9,
             image: '/images/mouse-LG.jpeg',
@@ -33,6 +36,7 @@ const data = {
         {
             id: 4,
             name: "Razer Mouse",
+            category: 'mouse',
             price: 300,
             rating: 4,
             image: '/images/mouse-Razer.jpeg',
@@ -43,6 +47,7 @@ const data = {
         {
             id: 5,
             name: "mech-keyboard-1",
+            category: 'keyboards',
             price: 300,
             rating: 5,
             image: '/images/keeb-1.jpeg',
@@ -53,6 +58,7 @@ const data = {
         {
             id: 6,
             name: "mech-keyboard-2",
+            category: 'keyboards',
             price: 300,
             rating: 4.3,
             image: '/images/keeb-2.jpeg',
@@ -63,6 +69,7 @@ const data = {
         {
             id: 7,
             name: "mech-keyboard-3",
+            category: 'keyboards',
             price: 300,
             rating: 5,
             image: '/images/keeb-3.jpeg',
