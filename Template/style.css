@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap');
+/*general styles*/
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    font-size: 1.6rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+h2{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+/* navbar*/
+.container{
+    display: grid;
+    grid-template-areas: 'header' 'main' 'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+
+header{
+    grid-area: header;
+    background: #203040 ;
+    padding: 1rem;  
+}
+header a{
+    color: #fff;
+  
+}
+
+header div:first-child{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 2.3rem;
+    display: inline-block;
+    margin-left: 2rem ;
+    
+}
+header div:not(:first-child),
+.icon {
+    font-size: 1.8rem;
+    margin-right: 2rem ;
+    list-style: none;
+}
+
+header div:not(:first-child) a:hover{
+    color: #000;
+}
+
+
+main{
+    grid-area:  main;
+    padding: 1rem;
+}
+
+footer{
+    grid-area: footer;
+    background: #203040;
+    color: #fff;
+    padding: 2rem;
+}
+
+footer span{
+    margin-right: 10px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row.center{
+    justify-content: center;
+}
+
+
+/*images*/
+img{
+    border-radius: 0.5rem;
+}
+
+img.medium{
+    max-width: 29rem;
+    width: 100%;
+}
+
+/*card*/
+.card{
+    border: 0.1rem solid #c0c0c0;
+    background-color: #f8f8f8;
+    border-radius: 0.5rem;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+}
+
+.card-body{
+    padding:  1rem;
+}
+
+.card-body > *{
+    margin-bottom: 0.5rem;
+}
+
+.products{
+    padding: 2rem;
+}
+
+.price{
+    font-size: 1.9rem;
+}
+
+.product-rating span{
+    color: #f0c040;
+    margin: 0.1rem;
+}
