@@ -6,6 +6,7 @@ import Home from './screens/Home'
 import ProductDetails from './screens/ProductDetails'
 import Cart from './screens/Cart';
 import SignIn from './screens/Sigin';
+import Register from './screens/Register';
 function App() {
   return (
       <BrowserRouter>
@@ -15,7 +16,9 @@ function App() {
                     <Route path='/product/:id' component={ProductDetails} ></Route>        
                     <Route path='/' component={Home}  exact></Route>  
                     <Route path='/cart/:id?' component={Cart}  ></Route>          
-                    <Route path='/login' component={SignIn}  ></Route>              
+                    <Route path='/login' component={SignIn}  ></Route>  
+                    <Route path='/register' component={Register}  ></Route>              
+
                 </section>
             <Footer />
         </div>

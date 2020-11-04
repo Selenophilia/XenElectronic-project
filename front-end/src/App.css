@@ -221,7 +221,7 @@ img.image__small{
      flex-direction: column;
      margin: 1rem;
 }
-
+input[type="text" i],
 input[type="email" i],
 input[type="password" i] {
     padding: 10px;

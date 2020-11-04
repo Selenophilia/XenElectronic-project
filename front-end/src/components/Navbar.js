@@ -34,7 +34,7 @@ function Navbar(){
                     userInfo ?  <div className='dropdown'>
                         <Link to="#">{userInfo.name} <i className="fa fa-caret-down"></i> </Link>
                         <ul className='dropdown-content'>
-                            <Link to='shipping#signout' onClick={signoutHandler}> Sign Out</Link>
+                            <Link to='/' onClick={signoutHandler}> Sign Out</Link>
                         </ul>
                     </div>: <Link to="/login">Sign In </Link>  
                 }
