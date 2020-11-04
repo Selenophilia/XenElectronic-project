@@ -6,7 +6,8 @@ import { userRegisterReducer, userSignInReducer } from './reducers/userReducer'
 
 const initialState = {
     cart:{
-        cartItems: localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []
+        cartItems: localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [],
+        shippingaddrs: localStorage.getItem('shippingaddrs') ? JSON.parse(localStorage.getItem('shippingaddrs')) : {}
        },
     usersignin:{
         userInfo: localStorage.getItem('userinfo') ? JSON.parse(localStorage.getItem('userinfo')) : null

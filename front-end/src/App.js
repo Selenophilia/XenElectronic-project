@@ -7,6 +7,8 @@ import ProductDetails from './screens/ProductDetails'
 import Cart from './screens/Cart';
 import SignIn from './screens/Sigin';
 import Register from './screens/Register';
+import ShippingAddrs from './screens/ShippingAddrs';
+import Payment from './screens/Payment'
 function App() {
   return (
       <BrowserRouter>
@@ -17,7 +19,9 @@ function App() {
                     <Route path='/' component={Home}  exact></Route>  
                     <Route path='/cart/:id?' component={Cart}  ></Route>          
                     <Route path='/login' component={SignIn}  ></Route>  
-                    <Route path='/register' component={Register}  ></Route>              
+                    <Route path='/register' component={Register}  ></Route>     
+                    <Route path='/shipping' component={ShippingAddrs}  ></Route>              
+                    <Route path='/payment' component={Payment}  ></Route>              
 
                 </section>
             <Footer />
