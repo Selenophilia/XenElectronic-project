@@ -16,6 +16,11 @@ app.get('/api/products', (req, res) => {
    res.send(data.products)
 });
 
+app.get('/api/product/:id', (req, res) => {
+  const product =  data.products.find((prod ) =>  prod.id ===  parseInt(req.params.id))
+  product ? res.send(product) : res.status(404).send({message: 'product not found'})
+});
+
 app.listen(PORT, function () {
   console.log(`listening on ${PORT}`);
 });
