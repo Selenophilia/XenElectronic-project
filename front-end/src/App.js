@@ -4,6 +4,7 @@ import Footer from   './components/Footer'
 import  { BrowserRouter, Route } from 'react-router-dom'
 import Home from './screens/Home'
 import ProductDetails from './screens/ProductDetails'
+import Cart from './screens/Cart';
 function App() {
   return (
       <BrowserRouter>
@@ -11,7 +12,8 @@ function App() {
             <Navbar /> 
                 <section className="products">
                     <Route path='/product/:id' component={ProductDetails} ></Route>        
-                    <Route path='/' component={Home}  exact></Route>        
+                    <Route path='/' component={Home}  exact></Route>  
+                    <Route path='/cart/:id?' component={Cart}  ></Route>              
                 </section>
             <Footer />
         </div>

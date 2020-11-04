@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import Rating from '../components/Rating';
 // import data from '../seed'
@@ -12,11 +12,25 @@ function ProductDetails(props){
    const getProdId = props.match.params.id
    const productDetails = useSelector(state => state.productDetails)
    const {error, loading, product} = productDetails
+   const [qty, setQty] = useState(1)
   
    
    useEffect(() => {
        dispatch(detailsProducts(getProdId));
    }, [dispatch, getProdId]);
+
+   const handleInput = (e) =>{
+        setQty(e.target.value)
+   }
+   const addQty = () => {
+       setQty( qty + 1)
+   }
+   const subQty = () => {
+    setQty( qty - 1)
+   }
+   const cartHandler = () => {
+        props.history.push(`/cart/${getProdId}?qty=${qty}`)
+   }
     return(
         <div >
                {loading ? ( <Loader />  
@@ -46,19 +60,47 @@ function ProductDetails(props){
                                         <div> Price: </div>  
                                         <div className='price'> ${product.price}</div>  
                                     </div>
-                                    <div className='row'>
-                                        <div> Qty: </div>  
-                                        <div className='price'> 1</div>  
-                                    </div>
+
                                     <div className='row'>
                                         <div> Stock:</div>  
                                         <div className='stock'> {product.numStock >  0 ? product.numStock : 0} in stock</div>  
                                     </div>
                                 </li>
-                            
-                                <li>
-                                    <button className='primary'> Add to Cart</button>
-                                </li>
+                                   {
+                                       product.numStock > 0
+                                        ? ( 
+                                            <>
+                                            <li>
+                                                  <div className='row'>
+                                                    <div> Qty: </div> 
+                                                    <div>
+                                                    <button className='btn-qty'
+                                                            onClick={addQty}><i class="fa fa-plus"></i></button> 
+                                                    <select className='qty'
+                                                            value={qty}
+                                                            onChange={(e) => handleInput(e)}
+                                                    >
+                                                        {
+                                                            [...Array(product.numStock).keys()].map((count) => (
+                                                            <option key={count + 1} value={count+1}> {count +1}</option>
+                                                                ))
+                                                        }    
+                                                    </select> 
+                                                    <button className='btn-qty'
+                                                            onClick={subQty}><i class="fa fa-minus"></i></button> 
+                                                    </div>
+
+                                                </div>
+                                            </li> 
+                                            <li>   
+                                                  <button className='primary'
+                                                        onClick={cartHandler}> Add to Cart</button>
+                                            </li>
+                                            </>) : null
+                                           
+                                       
+                                   }                             
+
                             </ul>
                     </div>
 

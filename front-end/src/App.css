@@ -20,6 +20,15 @@ header a{
   
 }
 
+.badge{
+    background-color: #f02020;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.2rem 0.7rem;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
 header div:first-child{
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
@@ -158,6 +167,24 @@ img.image__small{
     float: right;
     color: #c0c0c0;
 }
+
+.qty{
+    text-align: right;
+    padding: 5px
+ 
+}
+
+.btn-qty{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.btn-qty:hover{
+    border: none;
+    outline: none;
+}
+
 
 
 /* error box*/
