@@ -12,7 +12,7 @@ function Navbar(){
             </div>
             
             <div>
-                <Link to='/shopping-cart'> <span className="icon">
+                <Link to='/cart'> <span className="icon">
                     <i className="fa fa-shopping-cart"></i>
                     {
                     cartItems.length > 0  
