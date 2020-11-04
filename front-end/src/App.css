@@ -228,9 +228,9 @@ input[type="password" i] {
     border: 1px solid #000;
     border-radius: 0.5rem;
 }
+
 .form label{
     margin: 1rem 0;
-    display: block;
 }
 
 .dropdown{
@@ -271,3 +271,4 @@ input[type="password" i] {
     border-top-color: #f08000;
     color: #f08000;
 }
+

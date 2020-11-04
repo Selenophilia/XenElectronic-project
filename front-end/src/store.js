@@ -7,7 +7,8 @@ import { userRegisterReducer, userSignInReducer } from './reducers/userReducer'
 const initialState = {
     cart:{
         cartItems: localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [],
-        shippingaddrs: localStorage.getItem('shippingaddrs') ? JSON.parse(localStorage.getItem('shippingaddrs')) : {}
+        shippingaddrs: localStorage.getItem('shippingaddrs') ? JSON.parse(localStorage.getItem('shippingaddrs')) : {},
+        paymentMethod: 'Paypal'
        },
     usersignin:{
         userInfo: localStorage.getItem('userinfo') ? JSON.parse(localStorage.getItem('userinfo')) : null
@@ -19,7 +20,7 @@ const reducer = combineReducers({
                     productDetails: productDetailsReducer,
                     cart: cartReducer,
                     usersignin: userSignInReducer,
-                    userRegister: userRegisterReducer
+                    userRegister: userRegisterReducer,
                 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
