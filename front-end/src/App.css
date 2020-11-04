@@ -221,7 +221,7 @@ img.image__small{
      flex-direction: column;
      margin: 1rem;
 }
-
+input[type="text" i],
 input[type="email" i],
 input[type="password" i] {
     padding: 10px;
@@ -230,5 +230,28 @@ input[type="password" i] {
 }
 .form label{
     margin: 1rem 0;
+    display: block;
+}
+
+.dropdown{
+   display: inline-block; 
+   position: relative;
+}
+
+.dropdown-content{
+    position: absolute;
+    display: none;
+    right: 0;
+    min-width: 15rem;
+    padding: 1rem;
+    z-index: 1;
+    background-color: #203040;
+    margin: 0;
+    margin-top: 0.4rem;
+    border-radius: 0.5rem;
+    border: 1px solid #000;
+}
+
+.dropdown:hover .dropdown-content{
     display: block;
 }
