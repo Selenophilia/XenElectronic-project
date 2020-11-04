@@ -209,3 +209,26 @@ img.image__small{
  cart-item{
      min-width: 30rem;
  }
+
+ /* sign in*/
+ .form{
+     max-width: 60rem;
+     margin:  0 auto;
+ }
+
+ .form > div{
+     display: flex;
+     flex-direction: column;
+     margin: 1rem;
+}
+
+input[type="email" i],
+input[type="password" i] {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+}
+.form label{
+    margin: 1rem 0;
+    display: block;
+}
