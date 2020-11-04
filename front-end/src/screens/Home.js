@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Product from '../components/Product'
 import axios from 'axios'
 import Loader from '../components/Loader'
+import AlertMessages from '../components/AlertMessages'
 function ProductDetails(props){
     const [products, setProduct] = useState([])
     const [loader, setLoader] = useState(false)
@@ -40,7 +41,9 @@ function ProductDetails(props){
     return(
         <div className="row center">   
 
-        {loader ? <Loader /> : getProducts }
+        {loader ? ( <Loader />  
+         ) : error ?  (<AlertMessages>{error} </AlertMessages>
+         ) : getProducts}
               
         </div>         
     );
