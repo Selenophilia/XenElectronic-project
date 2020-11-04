@@ -1,23 +1,22 @@
-import React from 'react'
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
 import Rating from '../components/Rating';
 // import data from '../seed'
 import Loader from '../components/Loader'
 import AlertMessages from '../components/AlertMessages'
+import { detailsProducts } from '../actions/productActions';
 
 function ProductDetails(props){
     // const product =  data.products.find((prod ) =>  prod.id ===  parseInt(props.match.params.id))
+   const dispatch = useDispatch();
+   const getProdId = props.match.params.id
    const productDetails = useSelector(state => state.productDetails)
    const {error, loading, product} = productDetails
-    if(!product){
-        return(   
-        <div className='row product-details'>
-            <div className='col-2'>
-                    <h1> product not found </h1>
-            </div>
-        </div>
-        );
-    }
+  
+   
+   useEffect(() => {
+       dispatch(detailsProducts(getProdId));
+   }, [dispatch, getProdId]);
     return(
         <div >
                {loading ? ( <Loader />  
