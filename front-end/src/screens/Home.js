@@ -25,8 +25,8 @@ function ProductDetails(){
         {loading ? ( <Loader />  
          ) : error ?  (<AlertMessages>{error} </AlertMessages>
          ) : products.map((product) => 
-                        <Product key={product.id} 
-                                id={product.id}    
+                        <Product key={product._id} 
+                                id={product._id}    
                                 name={product.name}
                                 price={product.price}
                                 image_url={product.image}
