@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { addToCart } from '../actions/cartActions';
+import { addToCart, removeToCart } from '../actions/cartActions';
 import {  useDispatch, useSelector } from 'react-redux';
 import AlertMessages from '../components/AlertMessages';
 import { Link } from 'react-router-dom'
@@ -18,7 +18,9 @@ function Cart(props){
         }
 
     }, [dispatch,getProductId, getQty])
+
     const removeItemHandler = (itemId) => {
+        dispatch(removeToCart(itemId))
 
     }
 
@@ -32,13 +34,13 @@ function Cart(props){
     {cartItems.length === 0 ? <AlertMessages> Shopping Cart Empty! <Link to='/'> Go To Shopping Page</Link></AlertMessages> 
     : (<ul>
         {cartItems.map((item) => ( 
-                <li key={item.id}>
+                <li key={item.product}>
                     <div className='row'>
                         <div>
                              <img  src={item.image} alt={item.name} className='image__small'/>
                         </div>
                         <div className='cart-item'>
-                            <Link to={`/product/${item.id}`}> {item.name}</Link>
+                            <Link to={`/product/${item.product}`}> {item.name}</Link>
                         </div>
                         <div>
                         <select className='qty'
@@ -73,7 +75,7 @@ function Cart(props){
                     </div>
                     <div>
                         <button className={cartItems.length === 0 ? 'disabled' : 'primary'}
-                                 onClick={checkoutHandler}> Proceed to Checkout</button>
+                                 onClick={checkoutHandler} disabled={cartItems.length === 0}> Proceed to Checkout</button>
                     </div>
                  </div>
             </div>

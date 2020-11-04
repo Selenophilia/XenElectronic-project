@@ -58,6 +58,17 @@ ul{
     font-weight: 600;
 }
 
+.disabled{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 10px 5px;
+  width: 100%;
+  border: 0.1rem solid #a4a4a4;
+  background-color: #a4a4a4;
+  color: #fff;
+  font-weight: 600;
+}
+
 button:hover{
   border: 1px solid black;
   cursor: pointer;
