@@ -10,8 +10,11 @@
   "author": "Paulo Argenal",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "esm": "^3.2.25",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "mongoose": "^5.10.11"
   },
   "devDependencies": {
     "eslint": "^7.12.1",

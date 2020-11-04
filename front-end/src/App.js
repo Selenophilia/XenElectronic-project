@@ -11,7 +11,7 @@ function App() {
         <div className="container">
             <Navbar /> 
                 <section className="products">
-                    <Route path='/product/:id' component={ProductDetails} ></Route>        
+                    <Route path='/products/:id' component={ProductDetails} ></Route>        
                     <Route path='/' component={Home}  exact></Route>  
                     <Route path='/cart/:id?' component={Cart}  ></Route>              
                 </section>

@@ -6,12 +6,13 @@ import { Link }  from 'react-router-dom'
 function Product(props){
     return(
         <div className="card">
-                    <Link to={`/product/${props.id}`}>
+            {console.log(props.name)}
+                    <Link to={`/products/${props.id}`}>
                       <img className="image__medium" src={props.image_url} alt={props.name}/>   
                       </Link>
                       <div className="card-body">
                           <div className="product-details">
-                              <Link to={`/product/${props.id}`}>
+                              <Link to={`/products/${props.id}`}>
                                         <h1> {props.name}</h1>    
                               </Link>
                               <span className='price'>

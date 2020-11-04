@@ -8,7 +8,7 @@ export const listProducts = () => async (dispatch) => {
         const { data } = await Axios.get('/api/products')   
         dispatch({
             type: PRODUCT_LIST_SUCCESS,
-            payload: data    
+            payload: data.products    
         })
        
     }catch(err){
