@@ -1,7 +1,21 @@
+import bcyrpt from 'bcryptjs'
 const data = {
+    users: [
+        {
+            name: 'Paulo Argenal',
+            email: 'admin@email.com',
+            password: bcyrpt.hashSync('password', 8),
+            isAdmin: true
+        },
+        {
+            name: 'John Doe',
+            email: 'user@email.com',
+            password: bcyrpt.hashSync('password', 8),
+            isAdmin: false
+        }
+    ],
     products: [
         {
-            id: 1,
             name: "Playstation 4 Console",
             category: 'console',
             price: 200,
@@ -13,7 +27,6 @@ const data = {
             numStock: 20
         },
         {
-            id: 2,
             name: "Xbox 360 controller",
             category: 'console',
             price: 120,
@@ -25,7 +38,6 @@ const data = {
             numStock: 0
         },
         {
-            id: 3,
             name: "logitech-502",
             category: 'mouse',
             price: 300,
@@ -37,7 +49,6 @@ const data = {
             numStock: 30
         },
         {
-            id: 4,
             name: "Razer Mouse",
             category: 'mouse',
             price: 300,
@@ -49,7 +60,6 @@ const data = {
             numStock: 40
         },
         {
-            id: 5,
             name: "mech-keyboard-1",
             category: 'keyboards',
             price: 300,
@@ -61,7 +71,6 @@ const data = {
             numStock: 50
         },
         {
-            id: 6,
             name: "mech-keyboard-2",
             category: 'keyboards',
             price: 300,
@@ -73,7 +82,6 @@ const data = {
             numStock: 10
         },
         {
-            id: 7,
             name: "mech-keyboard-3",
             category: 'keyboards',
             price: 300,

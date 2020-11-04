@@ -20,6 +20,15 @@ header a{
   
 }
 
+.badge{
+    background-color: #f02020;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.2rem 0.7rem;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
 header div:first-child{
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
@@ -159,6 +168,44 @@ img.image__small{
     color: #c0c0c0;
 }
 
+.qty{
+    text-align: right;
+    padding: 5px
+ 
+}
 
-/* product details*/
+.btn-qty{
+    background: none;
+    border: none;
+    outline: none;
+}
 
+.btn-qty:hover{
+    border: none;
+    outline: none;
+}
+
+
+
+/* error box*/
+.danger{
+    padding: 1rem;
+    width: 100%;
+    border: 0.1rem solid transparent;
+    border-radius: 0.5rem;
+    color: #a02020;
+    background: #ffe0e0e0;
+}
+
+.info{
+    padding: 1rem;
+    border: 0.1rem solid transparent;
+    border-radius: 0.5rem;
+    color: #2020a0;
+    background: #e0e0ff;
+}
+
+/* cart */
+ cart-item{
+     min-width: 30rem;
+ }

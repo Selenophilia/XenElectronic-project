@@ -1,10 +1,18 @@
 import express from "express";
-import data from './seed'
+import mongoose from 'mongoose'
+import productRoutes from "./routes/productRouter";
+import userRoutes from "./routes/userRoutes";
 
 // run node -r esm back-end/server.js to start server
 // for nodemon nodemon -r esm server.js
 
 const app = express();
+
+mongoose.connect('mongodb://localhost/xenelectronic', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+})
 
 const  PORT = process.env.PORT || 5000
 
@@ -12,16 +20,15 @@ app.get('/', (req, res) => {
     res.send('Server Ready!');
   });
 
-app.get('/api/products', (req, res) => {
-   res.send(data.products)
-});
+app.use('/api', userRoutes)
+app.use('/api', productRoutes)
 
-app.get('/api/product/:id', (req, res) => {
-  const product =  data.products.find((prod ) =>  prod.id ===  parseInt(req.params.id))
-  product ? res.send(product) : res.status(404).send({message: 'product not found'})
-});
-
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) => {
+  res.status(500).send({message: err.message})
+})
 app.listen(PORT, function () {
   console.log(`listening on ${PORT}`);
 });
+
 
