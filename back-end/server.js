@@ -2,11 +2,14 @@ import express from "express";
 import mongoose from 'mongoose'
 import productRoutes from "./routes/productRouter";
 import userRoutes from "./routes/userRoutes";
+import dotenv from "dotenv"
 
 // run node -r esm back-end/server.js to start server
 // for nodemon nodemon -r esm server.js
-
+dotenv.config()
 const app = express();
+app.use(express.json())
+app.use(express.urlencoded({extended: true  }))
 
 mongoose.connect('mongodb://localhost/xenelectronic', {
   useNewUrlParser: true,
