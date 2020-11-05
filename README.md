@@ -1,59 +1,41 @@
 Project Title
-Xenelectronic ecommerce store
+Xen-Electronic is an online gadget store whereas customers can buy gadgets that they need.
 
 Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development  
 
 Prerequisites
 - MongoDB
-- Express
-- React
-- Node
+- Express.Js
+- React.JS
+- Node.JS
 
-Give examples
+
 Installing
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-Give the example
-And repeat
-
-until finished
-End with an example of getting some data out of the system or using it for a little demo
-
-Running the tests
-Explain how to run the automated tests for this system
-
-Break down into end to end tests
-Explain what these tests test and why
-
-Give an example
-And coding style tests
-Explain what these tests test and why
-
-Give an example
-Deployment
-Add additional notes about how to deploy this on a live system
+1. clone this repository
+2. cd XenElectronic-project
+3. npm install to the root folder to install back-end dependencies
+4. npm install front-end folder to install front-end dependencies
+5. on root folder run node -r esm back-end/server.js to start server
+6. on front-end folder run npm run start to start react-app
+7. to check out sample video presentation click link below:
+https://d.pr/free/v/HKvPab
 
 Built With
-Dropwizard - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+Front-End: 
+    React.js(create-react-app) - JS library that use mostly in the front-end
+    React-Router - were used for the routing of the pages
+    Redux - State Management
+    HTML/CSS - for creating my initial design and my template
+Back-End:
+    Mongoose - is used for query building, fetching data and creating data inside my database.
+Security: 
+    JsonWebToken(JWT) - is used to authenticate the user inside the system
+    Bcrypt.Js - used to hash users password.    
 
 Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
+I use Github for versioning.  I created 2 branch along the while developing this project. A branch for coding my back-end application and a branch for coding my front-end application. 
 
 Authors
-Billie Thompson - Initial work - PurpleBooth
-See also the list of contributors who participated in this project.
+Paulo Argenal 
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
-
-Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
