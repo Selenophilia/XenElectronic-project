@@ -1,5 +1,5 @@
-Project Title
-- Xen-Electronic is an online gadget store whereas customers can buy gadgets that they need.
+Xen-Electronic E-Commerce Web App
+- is an online gadget store whereas customers can buy gadgets that they need.
 
 Getting Started
 - These instructions will get you a copy of the project up and running on your local machine for      development  
@@ -44,6 +44,7 @@ Versioning
 
 I use Github for versioning.  I created 2 branches along the way while developing this project. A branch for coding my back-end application and a branch for coding my front-end application. 
 
-Authors
+Author:
+
 Paulo Argenal 
 
