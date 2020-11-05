@@ -4,45 +4,30 @@ import { saveshippingaddress } from '../actions/cartActions'
 import Checkout from '../components/Checkout'
 
 function ShippingAddrs(props){
+    const dispatch = useDispatch();
     const user = useSelector(state => state.usersignin)
     const { userInfo }  = user
     const cart = useSelector(state => state.cart)
-   
     const {shippingaddrs} = cart
     const [name, setName] = useState(shippingaddrs.name)
     const [address, setAddress] = useState(shippingaddrs.address)
     const [city, setCity] = useState(shippingaddrs.city)
     const [postalcode, setPostalCode] = useState(shippingaddrs.postalcode)
     const [country, setCountry] = useState(shippingaddrs.country)
-    const dispatch = useDispatch();
+ 
 
     if(!userInfo) {
         props.history.push('/login')
     }
 
-    const nameHandler = (e) => {
-        setName(e.target.value)
-    }
-    const addrsHandler = (e) => {
-        setAddress(e.target.value)
-    }
-    const cityHandler = (e) => {
-        setCity(e.target.value)
-    }
-
     const submitHandler = (e) => {
            e.preventDefault()
            dispatch(saveshippingaddress({name, address, country, postalcode, city}))
+         
            props.history.push('/payment')
     }
 
-    const postalCodeHandler = (e) => {
-        setPostalCode(e.target.value)
-    }
-
-    const countryHandler = (e) => {
-        setCountry(e.target.value)
-    }
+   
     return(
         <div >
             <Checkout step1 step2></Checkout>
@@ -54,7 +39,7 @@ function ShippingAddrs(props){
                            id="name"
                            placeholder="Enter your name..."
                            value={name}
-                           onChange={(e) => nameHandler(e) }  
+                           onChange={(e) => setName(e.target.value) }  
                            required/>
                 </div>
                 <div> <label htmlFor="address"> Address</label>
@@ -62,7 +47,7 @@ function ShippingAddrs(props){
                            id="text"
                            placeholder="Enter your address..."
                            value={address}
-                           onChange={(e) => addrsHandler(e) }
+                           onChange={(e) =>   setAddress(e.target.value)}
                            required/>
                 </div>
                 <div> <label htmlFor="address"> City</label>
@@ -70,7 +55,7 @@ function ShippingAddrs(props){
                            id="text"
                            placeholder="Enter your city..."
                            value={city}
-                           onChange={(e) => cityHandler(e)}
+                           onChange={(e) => setCity(e.target.value)}
                            required/>
                 </div>
                 <div> <label htmlFor="address"> Postal Code</label>
@@ -78,7 +63,7 @@ function ShippingAddrs(props){
                            id="text"
                            placeholder="Enter your postal code..."
                            value={postalcode}
-                           onChange={(e) => postalCodeHandler(e)}
+                           onChange={(e) =>  setPostalCode(e.target.value)}
                            required/>
                 </div>
                 <div> <label htmlFor="address"> Country</label>
@@ -86,7 +71,7 @@ function ShippingAddrs(props){
                            id="text"
                            placeholder="Enter your country..."
                            value={country}
-                           onChange={(e) => countryHandler(e)}
+                           onChange={(e) =>   setCountry(e.target.value)}
                            required/>
                 </div>
                 <div>

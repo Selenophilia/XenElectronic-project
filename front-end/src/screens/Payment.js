@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { savePaymentMethod } from '../actions/cartActions'
 import Checkout from '../components/Checkout'
 
-function ShippingAddrs(props){
-    const [payment, setPayment] = useState('Paypal')
+function Payment(props){
     const dispatch = useDispatch()
+
+
+    const {shippingaddress} = useSelector( (state) => state.cart)
+    const [payment, setPayment] = useState('Paypal')
    
-    
     const submitHandler = (e) => {
            e.preventDefault()
            dispatch(savePaymentMethod(payment))
@@ -15,6 +17,10 @@ function ShippingAddrs(props){
     }
 
   
+    if(!shippingaddress){
+        props.history.push('/shipping')
+    }
+    
     return(
         <div >
             <Checkout step1 step2 step3></Checkout>
@@ -51,4 +57,4 @@ function ShippingAddrs(props){
     );
 }
 
-export default ShippingAddrs
+export default Payment
