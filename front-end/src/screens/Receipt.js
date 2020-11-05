@@ -8,6 +8,7 @@ function Receipt(props){
     const {shippingaddress, paymentMethod, cartItems} = useSelector( (state) => state.cart)
     const checkoutHandler = (e) =>{
         e.preventDefault();
+        localStorage.removeItem('cartItems');
         props.history.push('/checkout')
     }
 
