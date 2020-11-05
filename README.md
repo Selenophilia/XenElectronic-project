@@ -19,7 +19,8 @@ Installing
 5. on root folder run node -r esm back-end/server.js to start server
 6. on front-end folder run npm run start to start react-app
 7. to check out sample video presentation click link below:
-https://d.pr/free/v/HKvPab
+
+https://drive.google.com/file/d/1JEd19BTy2lFqMi1bJ2rMO7o-XThQ8EbX/view?usp=sharing
 
 Built With
 
