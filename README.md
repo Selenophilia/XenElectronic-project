@@ -31,7 +31,7 @@ Front-End:
    - HTML/CSS - for creating my initial design and my template
 
 Back-End:
-
+    - Post-man - use to test my api routes in the back end.
     - Mongoose - is used for query building, fetching data and creating data inside my database.
 Security:
 
