@@ -22,6 +22,7 @@ Installing
 https://d.pr/free/v/HKvPab
 
 Built With
+
 Front-End: 
     React.js(create-react-app) - JS library that use mostly in the front-end
     React-Router - were used for the routing of the pages
