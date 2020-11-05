@@ -25,18 +25,20 @@ Built With
 
 Front-End: 
 
-   - React.js(create-react-app) - JS library that use mostly in the front-end
-   - React-Router - were used for the routing of the pages
-   - Redux - State Management
-   - HTML/CSS - for creating my initial design and my template
+- React.js(create-react-app) - JS library that use mostly in the front-end
+- React-Router - were used for the routing of the pages
+- Redux - State Management
+- HTML/CSS - for creating my initial design and my template
 
 Back-End:
-    - Post-man - use to test my api routes in the back end.
-    - Mongoose - is used for query building, fetching data and creating data inside my database.
+
+- Post-man - use to test my api routes in the back end.
+- Mongoose - is used for query building, fetching data and creating data inside my database.
+
 Security:
 
-    - JsonWebToken(JWT) - is used to authenticate the user inside the system
-    - Bcrypt.Js - used to hash users password.    
+- JsonWebToken(JWT) - is used to authenticate the user inside the system
+- Bcrypt.Js - used to hash users password.    
 
 Versioning
 
