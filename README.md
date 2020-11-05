@@ -1,8 +1,8 @@
 Project Title
-Xen-Electronic is an online gadget store whereas customers can buy gadgets that they need.
+- Xen-Electronic is an online gadget store whereas customers can buy gadgets that they need.
 
 Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development  
+- These instructions will get you a copy of the project up and running on your local machine for      development  
 
 Prerequisites
 - MongoDB
