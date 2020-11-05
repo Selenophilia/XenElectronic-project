@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom'
 function Receipt(props){
  
     const {shippingaddress, paymentMethod, cartItems} = useSelector( (state) => state.cart)
-    const checkoutHandler = () =>{
-
+    const checkoutHandler = (e) =>{
+        e.preventDefault();
+        props.history.push('/checkout')
     }
 
     const totalPrice = cartItems.reduce((acc, curr) => acc + curr.price * curr.qty , 0)
@@ -90,7 +91,7 @@ function Receipt(props){
 
 
                          <button className='primary'
-                                 onClick={checkoutHandler} >Buy</button>
+                                 onClick={(e) => checkoutHandler(e)} >Buy</button>
                          </div>
                          <div>
 
@@ -98,8 +99,6 @@ function Receipt(props){
                      </ul>
                     </div>
             </div>
-
-           
         </div>
     );
 }
