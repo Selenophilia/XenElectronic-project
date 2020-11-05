@@ -34,7 +34,7 @@ Security:
     Bcrypt.Js - used to hash users password.    
 
 Versioning
-I use Github for versioning.  I created 2 branch along the while developing this project. A branch for coding my back-end application and a branch for coding my front-end application. 
+I use Github for versioning.  I created 2 branches along the way while developing this project. A branch for coding my back-end application and a branch for coding my front-end application. 
 
 Authors
 Paulo Argenal 
