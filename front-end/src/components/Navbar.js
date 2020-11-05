@@ -16,7 +16,7 @@ function Navbar(){
     return(
         <header className="row">
             <div>
-                <Link to="/"> XenElectronic </Link>
+                <Link to="/"><i class="fa fa-rocket"></i> XenElectronic </Link>
             </div>
             
             <div>
