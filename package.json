@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -r esm back-end/server.js"
+    "start": "node -r esm back-end/server.js"
   },
   "author": "Paulo Argenal",
   "license": "ISC",
