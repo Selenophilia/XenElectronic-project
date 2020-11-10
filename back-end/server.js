@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import productRoutes from "./routes/productRouter";
 import userRoutes from "./routes/userRoutes";
 import dotenv from "dotenv"
+import orderRoutes from "./routes/orderRoutes";
 
 // run node -r esm back-end/server.js to start server
 // for nodemon nodemon -r esm server.js
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 
 app.use('/api', userRoutes)
 app.use('/api', productRoutes)
+app.use('/api', orderRoutes)
 
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
